@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
     private fun buildDashMediaSource(uri: Uri): MediaSource {
         val dashChunkSourceFactory = DefaultDataSourceFactory(this, "agent")
         return ProgressiveMediaSource.Factory(dashChunkSourceFactory)
-            //.setDrmSessionManager(drmSessionManager ?: DrmSessionManager.DUMMY)
+            .setDrmSessionManager(drmSessionManager ?: DrmSessionManager.DUMMY)
             .createMediaSource(uri)
     }
 
